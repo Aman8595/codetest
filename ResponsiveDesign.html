@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+</head>
+<body>
+    <h1>responsive design</h1>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    
+    </div>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100%;
+            width: 80%;
+            background-color: green;
+            display: flex;
+       align-items: center;               /*ek particular resolution k neeche jane par boxes chipak ja rhe hence here comes the concept of media queries (kisi chij ko responsive banana)*/
+           
+            justify-content: space-around;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+         @media only screen and (max-width:500px){
+            .box{
+                background-color: pink;
+            }
+            .container{
+                flex-wrap: wrap;  /* This means that the items will flow onto additional lines to prevent overflow and improve readability.*/
+            }
+         }
+            
+         @media only screen and (max-width:300px){
+            .body{
+                text-align: center;
+            }
+            .box{
+                background-color: yellow;       /* u can have multiple changes you want through media queries*/
+            }
+         }
+        
+    </style>
+</body>
+</html>
